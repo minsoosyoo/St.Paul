@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>ST PAUL</title>
+	<link rel="stylesheet" href="./style.css">
+	<script src="https://kit.fontawesome.com/6d04f93e03.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<p id="mediaQuery"><marquee>THIS WEBSITE DOESN'T WORK 
+		<br>ON A PHONE! Heh~ :D</marquee></p>
+	<p id="S-1" class="big-letters">S</p>
+	<p id="P-1" class="big-letters">P</p>
+	<p id="P-2" class="big-letters">P</p>
+	<p id="S-2" class="big-letters">S</p>
+	<div class="book">
+		<input type="checkbox" id="c1">
+		<input type="checkbox" id="c2">
+		<input type="checkbox" id="c3">
+		<input type="checkbox" id="c4">
+
+		<div id="cover">
+			<div style="background-image: url(./images/students.png)"></div>
+			<div style="background-image: url(./images/students2.png)"></div>
+			<div style="background-image: url(./images/studentsDiscussion.png)"></div>
+			<div style="background-image: url(./images/studentslaughing.png)"></div>
+			<div style="background-image: url(./images/studentsLaughing2.png)"></div>
+			<div style="background-image: url(./images/studentslookingup.png)"></div>
+			<div style="background-image: url(./images/studentsWalking.png)"></div>
+			<p>Write Your Story At St. Paul</p>
+		</div>
+		<div class="flip-book">
+
+			<!-- first section -->
+			<div class="flip" id="p1">
+				<div class="back">
+					<div id="photo-gallery"></div>
+					<div class="text-wrap">
+						<ul class="dynamic-text">
+							<li><span>Integrity</span></li>
+							<li><span>Maturity</span></li>
+							<li><span>Independency</span></li>
+							<li><span>Communication</span></li>
+							<li><span>Transformation</span></li>
+						</ul>
+					</div>
+					<label class="back-btn" for="c1">Back</label>
+				</div>
+				<div class="front">
+					<h2>COMMUNITY PROFILE</h2>
+					<p class="content">Founded on the pursuit of self-discovery, <span>Saint Paul Prepatory Seoul (SPPS)</span>
+						engages students in a challenging college prepatory education. The two remote
+						campuses of <span>SPPS</span>, located in the cosmopolitan city of Seoul, South Korea.
+						SPPS was established in 2008 as non-profit, independent, co-educational private school.
+						The school has offered, and continues to offer advanced curricula in from elementary
+						to high school. The 1st campus serving elementary school to middle school is located in Daechi,
+						Seoul: the 2nd campus accomodating high school in located in Seocho, Seoul (grades nine through twelve).
+						SPPS offers rigorous academic preparation for higher education in a supportive community made up of
+						students, faculty, administrators and staff.</p>
+					<label class="next-btn" for="c1">Next</label>
+					<div id="divider"></div>
+				</div>
+			</div>
+
+			<!-- second section -->
+			<div class="flip" id="p2">
+				<div class="back" style="background-image: url(./images/spacebackground.jpg)">
+					
+					<!-- Responsive Animated Cards -->
+					
+					<div class="container">
+						<div class="card">
+							<div class="title">
+								<div class="bck">
+									<i class="fa-solid fa-person"></i>
+									<i class="fa-solid fa-person-dress"></i>
+								</div>
+							</div>
+							<h3 id="first-card-title">Total Enrollment: 131</h3>
+							<p>Gender: Male: <span>54%</span></p>
+							<p>Female: <span>46%</span></p> 
+						</div>
+						<div class="card">
+							<div class="title">
+								<div class="bck" id="earthicon"></div>
+								<!-- <img class="responsiveImg" src="./earthicon.png" alt=""> -->
+							</div>
+							<h3>Nationality:</h3>
+							<p>Korean: <span>97%</span></p>
+							<p>US & Canadian: <span>2%</span></p>
+							<p>Others: <span>1%</span></p>
+						</div>
+						<div class="card">
+							<div class="title">
+								<div class="bck" id="percentIcon"></div>
+								<!-- <img class="responsiveImg" src="./54percent.png" alt=""> -->
+							</div>
+							<h3>Teaching Faculty:</h3>
+							<p>Faculty with advanced degrees: </p>
+							<p><span>54%</span></p>
+						</div>
+						<div class="card">
+							<div class="title">
+								<div class="bck" id="ratioIcon"></div>
+								<!-- <img class="responsiveImg" src="./ratio.png" alt=""> -->
+							</div>
+							<h3>Student-to-Faculty Ratio</h3>
+							<p>6:1</p>
+						</div>
+					</div>
+			
+					
+					<label class="back-btn" for="c2">Back</label>
+				</div>
+				<div class="front">
+					<h2>MISSION & FIVE CORE VALUES</h2>
+					<p class="content"> By providing a supportive community and close personal attention to its students,
+						SPPS develops confident, active learners and respectful citizens who lead transformative lives.
+						Our Five Core Values are embedded in the <span>SPPS</span> curriculum: <span id="core-values">Integrity, Maturity, Independency, Communication and Transformation</span>
+						are modeled by all faculty, staff, and students and are implemented throughout all grade levels.	
+					</p>
+					<div id="photo-gallery-2"></div>
+					<label class="next-btn" for="c2">Next</label>
+				</div>
+			</div>
+
+			<!-- third section -->
+			<div class="flip" id="p3">
+				<div class="back">
+					<div id="cover">
+						<div style="background-image: url(./images/students.png)"></div>
+						<div style="background-image: url(./images/students2.png)"></div>
+						<div style="background-image: url(./images/studentsDiscussion.png)"></div>
+						<div style="background-image: url(./images/studentslaughing.png)"></div>
+						<div style="background-image: url(./images/studentsLaughing2.png)"></div>
+						<div style="background-image: url(./images/studentslookingup.png)"></div>
+						<div style="background-image: url(./images/studentsWalking.png)"></div>
+						<marquee id="marquee-1" behavior="scroll" direction="up" scrollamount="5"><span>What</span></marquee>
+						<marquee id="marquee-2" behavior="scroll" direction="right" scrollamount="5"><span>Scott</span></marquee>
+						<marquee id="marquee-3" behavior="scroll" direction="left" scrollamount="5"><span>Taught</span></marquee>
+						<marquee id="marquee-4" behavior="scroll" direction="right" scrollamount="5"><span>Us</span></marquee>
+					</div>
+					<label class="back-btn" for="c3">Back</label>
+				</div>
+
+				<!-- planet page -->
+				<div class="front" style="background-image: url(./images/spacebackground.jpg)">
+					<h2 id="no-bg">HIGH SCHOOL DIVISION STUDENT PROFILE</h2>
+					<p>(CLASS OF 2018-2021)</p>
+					<div class = "planets-container">
+						<div class="sun"></div>
+						<div class="planet-index" id="first-planet-index">
+							<!-- wrap each planet with div to be able to apply separate animation: route vs rotation -->
+							<div class="route">
+								<!-- need to re-manipulate the planets into circles -->
+								<div class="planet-container" id="first-planet-container">
+									<div class="planet" id="first-planet">
+										<label for="planet-1"></label>
+											<div id="icons">
+												<i class="fa-solid fa-person"></i>
+												<i class="fa-solid fa-person-dress"></i>
+											</div>
+										<div class="tooltip">
+											<p><span>Total Enrollment: </span>131</p>
+											<p>Gender: Male: <span>54%</span></p>
+											<p>Female: <span>46%</span></p> 
+											<div class="triangle"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="planet-index" id="second-planet-index">
+							<div class="route">
+								<div class="planet-container" id="second-planet-container">
+									<div class="planet" id="second-planet">
+										<label for="planet-2"></label>
+										<div id="earth"></div>
+										<div class="tooltip">
+											<p><span>Nationality:</span></p>
+											<p>Korean: <span>97%</span></p>
+											<p>US & Canadian: <span>2%</span></p>
+											<p>Others: <span>1%</span></p>
+											<div class="triangle"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="planet-index" id="third-planet-index">
+							<div class="route">
+								<div class="planet-container" id="third-planet-container">
+									<div class="planet" id="third-planet">
+										<p>54%</p>
+										<label for="planet-3"></label>
+										<div class="tooltip">
+											<p><span>Teaching Faculty:</span></p>
+											<p>Faculty with advanced degrees: </p>
+											<p><span>54%</span></p>
+											<div class="triangle"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+						<div class="planet-index" id="four-planet-index">
+							<div class="route">
+								<div class="planet-container" id="four-planet-container">
+									<div class="planet" id="four-planet">
+										<p>6:1</p>
+										<label for="planet-4"></label>
+										<div class="tooltip">
+											<p><span>Student-to-Faculty Ratio</span></p>
+											<p>6:1</p>
+											<div class="triangle"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+		
+					<label class="next-btn" for="c3">Next</label>
+				</div>
+			</div>
+
+			<!-- fourth section -->
+			<div class="flip" id="p4">
+				<div class="back">
+					<img id="logo" src="./images/logo.png" alt="St.Paul Logo">
+					<div id="contact">
+						<p><span>682371</span></p>
+						<p>Chairman of the Board</p>
+						<p><span>Jong Ho Kim, M.A. Ed</span></p>
+						<p>High School Division</p>
+						<p><span>Saint Paul Prepatory School</span></p>
+						<p>Admission Office</p>
+						<p>14-8 Seochojungang-ro 31-gil,</p>
+						<p>Seocho-gu, Seoul, korea, 06593</p>
+						<p>Tel) +82-2-3486-2000</p>
+						<p>Fax) +82-2-3486-6789</p>
+						<p><span>www.stpaulseoul.org</span></p>
+						<p>Elementary to Middle School<br> Division</p>
+						<p>Seoul Academy</p>
+						<p>Admission Office</p>
+						<p>16, Samseong-ro, 64-gil</p>
+						<p>Gangnam-gu, Seoul, Korea, <br>06191</p>
+						<p>Tel) +82-2-554-1690</p>
+						<p>Fax) +82-2-562-04519</p>
+						<p><span>www.seoulacademy.org</span></p>
+						<p>CEEB Code</p>
+					</div>
+					<ul class="social-media">
+						<li><i class="fa-brands fa-facebook"></i></li>
+						<li><i class="fa-brands fa-square-instagram"></i></li>
+						<li><i class="fa-brands fa-square-twitter"></i></li>
+						<!-- <li><i class="fa-brands fa-youtube"></i></li> -->
+						<li><i class="fa-brands fa-tiktok"></i></li>
+					</ul>
+					<label class="back-btn" for="c4">Back</label>
+				</div>
+				<div class="front">
+					<h2>ACCREDITATIONS</h2>
+					<p class="content"><span>SPPS is accredited through</span><br>
+						Accreditation International National Council for Private School Accreditation
+						The International Alliance for School Accreditation
+					</p>
+					<p class="content"><span>SPPS is a member of </span>
+						National Association of College Admission Counseling (NACAC). International Association for
+						College Admission Counseling (Int'l ACAC) <br>
+						National Honor Society (NHS) <br>
+						Korean Council of Overseas Schools (KORCOS)	
+					</p>
+					<div id="photo-gallery-3"></div>
+					<label class="next-btn" for="c4">Next</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(90deg, #F76C6C 50%, #A8D0E6 50%);
+}
+
+#mediaQuery {
+	display: none;
+}
+
+/* SPPS */
+.big-letters{
+	position: absolute;
+	font-size: 400px;
+	animation: text-fade-in 4s linear alternate;
+	transition: 1s;
+	opacity: 0;
+	animation-iteration-count: 3;
+	animation-fill-mode: forwards;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@keyframes text-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#S-1 {
+	top: -345px;
+	left: 35px;
+	color: #F8E9A1;
+	animation-delay: 1s;
+}
+#P-1 {
+	bottom: -345px;
+	left: 35px;
+	color: #A8D0E6;
+	animation-delay: 2s;
+}
+#P-2 {
+	top: -345px;
+	right: 35px;
+	color: #F76C6C;
+	animation-delay: 3s;
+}
+#S-2 {
+	bottom: -345px;
+	right: 35px;
+	color: #374785;
+	animation-delay: 4s;
+}
+
+input{
+	display: none;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.book{
+	display: flex;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#cover{
+	width: 500px;
+	height: 600px;
+}
+#cover p {
+	color: white;
+	font-size: 38px;
+	position: absolute;
+	left: 20px;
+	bottom: -20px;
+	animation: type 3s steps(28) infinite;
+	transition: 2s;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 4px solid white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+/* Trolling */
+#marquee-1, #marquee-2, #marquee-3, #marquee-4{
+	position: absolute;
+	color: white;
+	font-size: 38px;
+	transition: 2s;
+	white-space: nowrap;
+	border-right: 4px solid white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+#marquee-1 {
+	top: 50px;
+	left: 50px;
+}
+#marquee-2 {
+	top: 100px;
+	left: 100px;
+}
+#marquee-3 {
+	top: 150px;
+	left: 150px;
+}
+#marquee-4 {
+	top: 200px;
+	left: 200px;
+}
+@keyframes type {
+	0% {
+		width: 0ch;
+	}
+	100% {
+		width: 28ch;
+	}
+}
+.flip-book{
+	width: 500px;
+	height: 600px;
+	position: relative;
+}
+.flip{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	/* perspective: 1000px; */
+	/* transform: rotateY(0deg); */
+	transition: .8s;
+}
+h2 {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	color: #24305E;
+	font-size: 50px;
+	background: linear-gradient(90deg, rgba(248,233,161,1) 0%, rgba(247,108,108,1) 48%, rgba(248,233,161,1) 100%);
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(248,233,161,1);
+}
+h2 + p {
+	margin-top: 10px;
+	color: #F8E9A1;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #374785;
+	font-size: 32px;
+	font-weight: 500;
+}
+.content{
+	font-size: 20px;
+	color: #374785;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #374785;
+	font-weight: 500;
+}
+.content > span {
+	font-weight: bold;
+	font-style: oblique;
+	color: #F76C6C;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #374785;
+}
+.front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #F8E9A1;
+	box-sizing: border-box;
+	padding: 0 13px;
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5) 0 2px 5px rgba(0,0,0,.5);
+}
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	background: #24305E;
+}
+#photo-gallery {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 51%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 51%);
+	width: 100%;
+	height: 54%;
+	background-color: black;
+	background-image: url(./images/studentslaughing.png);
+	background-position-y: -85px;
+	background-position-x: -285px;
+	position: absolute;
+	top: 0;
+}
+#photo-gallery-2 {
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 38%;
+	background-image: url(./images/image3.jpeg);
+	background-repeat: repeat-y;
+}
+#photo-gallery-3 {
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 38%;
+	background-image: url(./images/teacher.png);
+	background-position-x: center;
+	background-position-y: 385px;
+	/* animation: slide-up 5s linear infinite; */
+}
+
+/* Next and Back Buttons */
+.next-btn{
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #24305E;
+	font-weight: 600;
+}
+#p2 .front .next-btn {
+	color: #F8E9A1;
+}
+#p3 .front .next-btn {
+	color: #F8E9A1;
+}
+.back-btn{
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #F8E9A1;
+	font-weight: 600;
+}
+
+/* cover-page photo slideshow */
+#cover {
+	overflow: hidden;
+	position: relative;
+}
+#cover > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	animation: slideshow 25s infinite;
+	opacity: 0;
+	background-size: cover;
+	background-position: center center;
+}
+#cover > div:nth-child(2) {
+	animation-delay: 4s;
+}
+#cover > div:nth-child(3) {
+	animation-delay: 8s;
+}
+#cover > div:nth-child(4) {
+	animation-delay: 12s;
+}
+#cover > div:nth-child(5) {
+	animation-delay: 16s;
+}
+#cover > div:nth-child(6) {
+	animation-delay: 20s;
+}
+#cover > div:nth-child(7) {
+	animation-delay: 24s;
+}
+@keyframes slideshow {
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	40% {
+		transform: scale(1.2);
+	}
+}
+
+/* Text Animation for 5 Core Values */
+#p1 .back {
+	display: flex;
+	align-items: flex-end;
+}
+.text-wrap {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.dynamic-text {
+	margin-left: 15px;
+}
+.dynamic-text li {
+	color: #F76C6C;
+	list-style: none;
+	font-size: 45px;
+	font-weight: 500;
+}
+.dynamic-text li span {
+	position: relative;
+
+}
+.dynamic-text li span::after{
+	content:"";
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #24305E;
+	border-left: 2px solid #FC606D;
+	animation: typing 3.5s steps(10);
+	animation-iteration-count: infinite;
+}
+@keyframes typing {
+	100% {
+		left: 100%;
+		margin: 0 -35px 0 35px;
+	}
+}
+
+/* Flip Book Animation */
+#p1{
+	z-index: 4;
+}
+#p2{
+	z-index: 3;
+}
+#p3{
+	z-index: 2;
+}
+#p4{
+	z-index: 1;
+}
+#c1:checked ~ .flip-book #p1{
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+#c2:checked ~ .flip-book #p2{
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+#c3:checked ~ .flip-book #p3{
+	transform: rotateY(-180deg);
+	z-index: 3;
+}
+#c4:checked ~ .flip-book #p4{
+	transform: rotateY(-180deg);
+	z-index: 4;
+}
+
+/* last page Contact */
+.social-media {
+	color: #F8E9A1;
+	list-style: none;
+	font-size: 40px;
+	font-weight: 500;
+	position: absolute;
+	bottom: 157px;
+	left: 295px;
+	transform: scale(2);
+}
+.social-media > li:hover {
+	z-index: 2;
+}
+.social-media > li:hover i {
+    animation: flip .5s forwards;
+}
+@keyframes flip {
+    50% {
+        transform: scale(1.3) rotateY(180deg);
+    }
+}
+
+#contact {
+	margin-left: 30px;
+}
+#contact > p > span {
+	color: #F76C6C;
+	font-size: 15px;
+	opacity: 1;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+#contact > p{
+	color: #24305E;
+	font-size: 15px;
+	margin: 1px;
+	opacity: 1;
+}
+#p4 #logo{
+	margin-left: 30px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	opacity: 1;
+}
+#p4 .back {
+	background: linear-gradient(90deg, #A8D0E6 50%, #24305E 50%);;
+}
+
+/* This is for Page 3 */
+/* Four Planets will float around */
+#p2 .back {
+	background-size: cover;
+}
+#p3 .front {
+	background-size: cover;
+}
+#no-bg {
+	background: none;
+	color: #F8E9A1;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #24305E;
+}
+.planets-container {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    transform: scaleX(5);
+	position: absolute;
+	bottom: 202px;
+	left: 95px;
+    /* 5 times on the X axis on parent and children */
+    /* oval shape, determines the route of the planet rotating */
+}
+.sun {
+	background-image: url("./images/logo.png");
+	background-repeat: no-repeat;
+  	background-size: cover;
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+	top: -10px;
+	left: 2px;
+    transform: scaleX(0.2);
+    box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+}
+#second-planet-container {
+    left: 45px;
+}
+#third-planet-container {
+    top: 30px;
+	left: 50px
+}
+#four-planet-container {
+    top: 30px
+}
+/* size of the planets floating around */
+.planet {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: white;
+	box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+    transform: scaleX(0.2);
+}
+#icons {
+	text-align: center;
+	padding-top: 15px;
+}
+i {
+	font-size: 40px;
+}
+.fa-person {
+	color: #24305E;
+}
+.fa-person-dress {
+	color: #F76C6C;
+}
+#second-planet {
+    background-image: url(./images/earthicon.png);
+	background-size: cover;
+}
+.fa-earth-asia {
+	font-size: 100px;
+}
+#third-planet {
+    background-image: url(./images/54percent.png);
+	background-size: cover;
+}
+.planet > p {
+	position: absolute;
+	top: 12px;
+	left: 25px;
+	font-weight: bold;
+}
+#four-planet {
+	background-image: url(./images/ratio.png);
+	background-size: cover;
+}
+.planet-index {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#first-planet-index {
+    animation: hideFirstPlanet 12s infinite;
+}
+@keyframes hideFirstPlanet {
+    0% {
+        z-index: 999;
+        transform: scale(.8);
+    }
+    25% {
+        z-index: -999;
+		transform: scale(.8)
+    }
+	75% {
+		transform: scale(1.1);
+	}
+    100% {
+        z-index: 999;
+        transform: scale(1);
+    }
+}
+#second-planet-index {
+    animation: hideSecondPlanet 12s infinite;
+}
+@keyframes hideSecondPlanet {
+    0% {
+        z-index: -999px;
+        transform: scale(.8);
+    }
+	35% {
+		z-index: -999px;
+		transform: scale(1.1);
+	}
+    60% {
+		z-index: -999px;
+        transform: scale(1);
+    }
+	75% {
+		transform: scale(0.9);
+	}
+    100% {
+        z-index: 999;
+        transform: scale(.7);
+    }
+}
+#third-planet-index {
+    animation: hideThirdPlanet 12s infinite;
+}
+@keyframes hideThirdPlanet {
+    0% {
+        z-index: 999;
+        transform: scale(1.1);
+    }
+	50% {
+		z-index: -999px;
+        transform: scale(.8);
+	}
+    100% {
+        z-index: 999px;
+        transform: scale(1.1);
+    }
+}
+#four-planet-index {
+    animation: hideFourPlanet 12s infinite;
+}
+@keyframes hideFourPlanet {
+    0% {
+        z-index: -999;
+        transform: scale(.8);
+    }
+    25% {
+        z-index: 999;
+        transform: scale(1);
+    }
+	75% {
+		z-index: 999; 
+		transform: scale(1.2);
+	}
+    100% {
+        z-index: 999;
+        transform: scale(1);
+    }
+}
+/* same shape of the planet container */
+.route {
+    width: 100%;
+    height: 100%;
+    animation: rotate 12s infinite linear;
+    position: absolute;
+}
+/* re-manipulate the planets back into circle because rotate animation stretching it */
+.planet-container {
+    width: 30px;
+    height: 30px;
+    animation: correct 12s infinite linear;
+    position: absolute;
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+/* animation to undo the transform of rotate */
+@keyframes correct {
+    0% {
+        transform: rotateZ(360deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* tool tip for each planet */
+.tooltip {
+	font-size: 15px;
+    width: 130px;
+    height: 0px;
+    border-radius: 5px;
+    background-color: #F76C6C;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    opacity: 0;
+    right: -110px;
+	top: 5px;
+    position: absolute;
+}
+.tooltip > p > span {
+	font-weight: bold;
+	font-size: 16px;
+	color: #F8E9A1
+}
+.tooltip > p {
+	color: #A8D0E6;
+	margin: 0 0 6px 3px;
+}
+.planet:hover > .tooltip{
+    height: 100px;
+    opacity: 1;
+    position: absolute;
+	z-index: 1000;
+	transform: scale(1.2);
+	box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+}
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:10px solid #F76C6C;
+    left: -8px; 
+    top: 40px;
+    position: absolute;
+}
+.planets-container:hover *{
+	animation-play-state: paused !important;
+}
+
+/* responsive animated cards */
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+	position: absolute;
+	top: 75px;
+}
+.card {
+    height: 200px;
+    width: 175px;
+    background-image: url(./images/spacebackground.jpg);
+    border-radius: 5px;
+    position: relative;
+    margin: 5px;
+	margin-top: 20px;
+    cursor: pointer;
+    z-index: 0;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card:hover {
+    box-shadow: 1px 1px 15px gray;
+	z-index: 2;
+}
+.card:hover .bck{
+    animation: flip .5s forwards;
+}
+@keyframes flip {
+    50% {
+        transform: scale(1.3) rotateY(180deg);
+    }
+}
+.title {
+    width: 85px;
+    margin: -25px auto;
+	overflow: hidden;
+}
+.bck {
+    height: 85px;
+    width: 85px;
+    background: #05486b;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+	box-shadow: 0 0 60px rgb(253, 203, 163), 0 0 98px rgb(184, 160, 26);
+}
+.bck:first-of-type {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#earthicon {
+	background-image: url(./images/earthicon.png);
+	background-size: cover;
+}
+#percentIcon {
+	background-image: url(./images/54percent.png);
+	background-size: cover;
+}
+#ratioIcon {
+	background-image: url(./images/ratio.png);
+	background-size: cover;
+}
+.responsiveImg {
+    height: 75px;
+    margin: 10px;
+}
+h3 {
+    color: #F8E9A1;
+    font-size: 25px;
+    text-align: center;
+    margin: 50px 10px;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #374785;
+}
+.card p {
+	font-size: 15px;
+	text-align: center;
+	color: #F8E9A1;
+}
+#first-card-title {
+	font-size: 20px;
+}
+
+.flip-book {
+	background-image: url(./images/four.webp);
+	background-size: cover;
+	background-position: -50px;
+}
+
+
+@media screen and (max-width: 720px) {
+	.book, #S-1, #S-2, #P-1, #P-2 {
+		display: none;
+	}
+
+	#mediaQuery {
+		display: block;
+		font-size: 30px;
+		color: #24305E;
+	}
+  }
